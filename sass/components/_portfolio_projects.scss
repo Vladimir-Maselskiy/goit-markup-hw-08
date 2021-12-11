@@ -1,0 +1,78 @@
+.portfolio-projets-list__name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $first-text-color;
+}
+
+.portfolio-projets-list__type {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: $second-text-color;
+}
+
+.portfolio-projets-list__item {
+  display: flex;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background: $third-text-color;
+}
+
+.portfolio-projets-list__link {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+}
+
+.portfolio-projets-list__img-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-projets-list__text {
+  position: absolute;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $third-text-color;
+  background: rgba(33, 150, 243, 0.9);
+  top: 100%;
+  left: 0;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  overflow: auto;
+  .portfolio-projets-list__link:hover &,
+  .portfolio-projets-list__link:focus & {
+    transform: translateY(-100%);
+  }
+}
+
+.portfolio-projets-list {
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.portfolio-projets-list__description {
+  flex-direction: column;
+  padding: 20px 24px;
+  width: 370px;
+  border-left: 1px solid $third-background-color;
+  border-right: 1px solid $third-background-color;
+  border-bottom: 1px solid $third-background-color;
+}
+
+.portfolio-projets-list__name {
+  margin-bottom: 4px;
+}

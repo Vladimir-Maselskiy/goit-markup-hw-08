@@ -1,0 +1,128 @@
+.header-section {
+  border-bottom: 1px solid $line-color;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 479px) {
+    justify-content: space-between;
+  }
+}
+.mobile-button {
+  border: none;
+  background-color: transparent;
+  height: 40px;
+}
+
+.mobile-button__svg {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-container-list {
+  display: flex;
+  margin-left: 93px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.nav-container-list__link {
+  display: block;
+}
+.header-right-list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.icon-header {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  min-width: 10px;
+  min-height: 16px;
+}
+
+.header-right-list__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav-container-list__item,
+.header-right-list__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-container-list__item {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav-container-list__link {
+  position: relative;
+  text-decoration: none;
+  color: $first-text-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.header-right-list__link {
+  text-decoration: none;
+  color: $second-text-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+}
+.nav-container-list__link.current {
+  color: $accent-color;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+    bottom: -1px;
+    left: 0;
+  }
+}
