@@ -1,8 +1,9 @@
 // FEATURE-SECTION-----------------
 
 .feature-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-width: 320px;
 }
 
 .feature-section__container {
@@ -12,15 +13,14 @@
   margin: 0 auto;
 }
 .feature-section__item {
-  margin-right: 30px;
-  width: calc((100% + 30px) / 4 - 30px);
-  &:last-child {
-    margin-right: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
+
 .feature-section__icon-bock {
   display: flex;
-  min-width: 270px;
+  width: 100%;
   min-height: 120px;
   background-color: $first-background-color;
   margin-bottom: 30px;
@@ -40,6 +40,7 @@
   text-transform: uppercase;
   color: $first-text-color;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .feature-section__text {

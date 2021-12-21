@@ -1,4 +1,7 @@
 .projects-feature-section {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   padding-bottom: 94px;
 
   & .projects-feature-section__container {

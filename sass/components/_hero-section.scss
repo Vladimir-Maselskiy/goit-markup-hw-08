@@ -1,12 +1,20 @@
 .hero-section {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--third-text-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../img/main-img.jpg);
-  background-size: 1600px 600px;
+    url(../../img/Header-480.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-width: 320px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../img/Header@2x-480.jpg');
+  }
 
   & .hero-section__container {
     max-width: 1200px;
@@ -17,13 +25,13 @@
 }
 .hero-section__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $third-text-color;
   margin: 0 auto 30px auto;
-  max-width: 696px;
+  max-width: 360px;
   text-align: center;
 }
 
