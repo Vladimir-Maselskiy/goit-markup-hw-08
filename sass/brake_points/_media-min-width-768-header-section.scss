@@ -1,6 +1,5 @@
 @media screen and (min-width: 768px) {
   .header-section {
-    margin: 0;
     width: 768px;
   }
   .header-section .container {
@@ -45,13 +44,5 @@
       padding-top: 5px;
       padding-bottom: 21px;
     }
-  }
-  .backdrop {
-    padding-top: 0;
-  }
-  .modal {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }

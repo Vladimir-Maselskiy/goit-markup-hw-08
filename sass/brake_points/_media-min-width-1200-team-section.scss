@@ -1,0 +1,12 @@
+@media screen and (min-width: 1200px) {
+  .team-section {
+    width: 100%;
+    max-width: 1600px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .team-section__item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}

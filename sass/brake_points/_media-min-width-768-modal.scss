@@ -1,8 +1,6 @@
-@media screen and (min-width: 768px) {
-  .backdrop {
-    padding-top: 0;
-  }
+@media screen and (min-width: 480px) {
   .modal {
+    width: 450px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

@@ -1,0 +1,15 @@
+@media screen and (min-width: 1200px) {
+  .feature-section {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .feature-section__item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
+  .universal-title {
+    margin-bottom: 50px;
+  }
+}
