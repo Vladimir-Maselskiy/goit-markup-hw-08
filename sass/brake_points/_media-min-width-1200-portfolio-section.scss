@@ -1,0 +1,20 @@
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    width: 1200px;
+  }
+  .portfolio-section__filter-list {
+    margin-bottom: 50px;
+  }
+  .portfolio-projets-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+  .portfolio-projets-list__item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}

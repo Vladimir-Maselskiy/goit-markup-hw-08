@@ -1,3 +1,6 @@
+.portfolio-projets-list {
+}
+
 .portfolio-projets-list__name {
   font-weight: bold;
   font-size: 18px;
@@ -14,9 +17,6 @@
 }
 
 .portfolio-projets-list__item {
-  display: flex;
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
   margin-bottom: 30px;
   background: $third-text-color;
 }
@@ -38,6 +38,9 @@
   overflow: hidden;
 }
 
+.portfolio-projets-list__image {
+  width: 100%;
+}
 .portfolio-projets-list__text {
   position: absolute;
   padding: 63px 24px;
@@ -59,15 +62,10 @@
   }
 }
 
-.portfolio-projets-list {
-  margin-left: -30px;
-  margin-bottom: -30px;
-}
-
 .portfolio-projets-list__description {
   flex-direction: column;
   padding: 20px 24px;
-  width: 370px;
+  width: 100%;
   border-left: 1px solid $third-background-color;
   border-right: 1px solid $third-background-color;
   border-bottom: 1px solid $third-background-color;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Portfolio</title>
     <link
       rel="stylesheet"
@@ -23,10 +23,22 @@
   </head>
 
   <body>
-    <header class="header-section">
-      <div class="container flex">
+    <header class="header-section" js-menu-container>
+      <div class="container">
         <nav class="nav-container">
           <a class="logo link" href="" lang="en">Web<span class="lofo__syffix">Studio</span></a>
+          <button type="button" class="mobile-button" js-open-menu>
+            <svg class="mobile-button__svg">
+              <use
+                class="mobile-button__icon-cross"
+                href="./img/symbol-defs.svg#icon-close_mobile"
+              ></use>
+              <use
+                class="mobile-button__icon-menu"
+                href="./img/symbol-defs.svg#icon-menu_mobile"
+              ></use>
+            </svg>
+          </button>
           <ul class="nav-container-list list">
             <li class="nav-container-list__item">
               <a class="nav-container-list__link" href="./index.html">Студия</a>
@@ -40,21 +52,37 @@
           </ul>
         </nav>
         <ul class="header-right-list list">
-          <li class="header-right-list__item flex">
-            <a class="header-right-list__link flex" href="mailto:info@devstudio.com">
+          <li class="header-right-list__item">
+            <a class="header-right-list__link" href="mailto:info@devstudio.com">
               <svg class="icon-header icon-envelope">
                 <use href="./img/symbol-defs.svg#icon-envelope1"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="header-right-list__item flex">
-            <a class="header-right-list__link flex" href="tel:+380961111111">
+          <li class="header-right-list__item">
+            <a class="header-right-list__link" href="tel:+380961111111">
               <svg class="icon-header icon-smartphone">
                 <use href="./img/symbol-defs.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
+          </li>
+          <li class="header-right-list__item mobile-items">
+            <ul class="mobile-social-list list">
+              <li class="mobile-social-item">
+                <a class="mobile-social-list__link" href="">Instagram</a>
+              </li>
+              <li class="mobile-social-item">
+                <a class="mobile-social-list__link" href="">Twitter</a>
+              </li>
+              <li class="mobile-social-item">
+                <a class="mobile-social-list__link" href="">Facebook</a>
+              </li>
+              <li class="mobile-social-item">
+                <a class="mobile-social-list__link" href="">LinkedIn</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -63,7 +91,7 @@
       <section class="portfolio-section">
         <div class="portfolio-section__container">
           <h1 class="visually-hidden">Выполенные проэкты</h1>
-          <ul class="portfolio-section__filter-list list flex">
+          <ul class="portfolio-section__filter-list list">
             <li class="portfolio-section__filter-item">
               <button class="portfolio-section__filter-btn current-btn" type="button">Все</button>
             </li>
@@ -80,11 +108,19 @@
               <button class="portfolio-section__filter-btn" type="button">Маркетинг</button>
             </li>
           </ul>
-          <ul class="portfolio-projets-list list flex-wrap">
+          <ul class="portfolio-projets-list list">
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img21.jpg" alt="ноутбук" />
+                  <img
+                    srcset="
+                      ./img/project_section/img21.jpg    1x,
+                      ./img/project_section/img21@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img21.jpg"
+                    alt="ноутбук"
+                  />
                   <p class="portfolio-projets-list__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -100,7 +136,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img22.jpg" alt="баскетбол" />
+                  <img
+                    srcset="
+                      ./img/project_section/img22.jpg    1x,
+                      ./img/project_section/img22@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img22.jpg"
+                    alt="баскетбол"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -115,7 +159,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img23.jpg" alt="лого ресторана" />
+                  <img
+                    srcset="
+                      ./img/project_section/img23.jpg    1x,
+                      ./img/project_section/img23@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img23.jpg"
+                    alt="лого ресторана"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -130,7 +182,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img24.jpg" alt="наушеики" />
+                  <img
+                    srcset="
+                      ./img/project_section/img24.jpg    1x,
+                      ./img/project_section/img24@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img24.jpg"
+                    alt="наушеики"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -145,7 +205,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img25.jpg" alt="2 коробки" />
+                  <img
+                    srcset="
+                      ./img/project_section/img25.jpg    1x,
+                      ./img/project_section/img25@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img25.jpg"
+                    alt="2 коробки"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -160,7 +228,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img26.jpg" alt="монитор" />
+                  <img
+                    srcset="
+                      ./img/project_section/img26.jpg    1x,
+                      ./img/project_section/img26@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img26.jpg"
+                    alt="монитор"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -175,7 +251,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img27.jpg" alt="открытый журнал" />
+                  <img
+                    srcset="
+                      ./img/project_section/img27.jpg    1x,
+                      ./img/project_section/img27@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img27.jpg"
+                    alt="открытый журнал"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -190,7 +274,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img28.jpg" alt="лейба" />
+                  <img
+                    srcset="
+                      ./img/project_section/img28.jpg    1x,
+                      ./img/project_section/img28@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img28.jpg"
+                    alt="лейба"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -205,7 +297,15 @@
             <li class="portfolio-projets-list__item">
               <a class="portfolio-projets-list__link link" href="">
                 <div class="portfolio-projets-list__img-block">
-                  <img width="370" src="./img/img29.jpg" alt="робота с ноутбуком" />
+                  <img
+                    srcset="
+                      ./img/project_section/img29.jpg    1x,
+                      ./img/project_section/img29@2x.jpg 2x
+                    "
+                    class="portfolio-projets-list__image"
+                    src="./img/project_section/img29.jpg"
+                    alt="робота с ноутбуком"
+                  />
                   <p class="portfolio-projets-list__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos ut
                     ipsa quo eum laudantium molestiae, est minima libero placeat perspiciatis quae
@@ -255,7 +355,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer-section__center-part flex">
+        <div class="footer-section__center-part">
           <p class="footer-section__center-part-title">присоединяйтесь</p>
           <ul class="footer-section__center-icon-list list flex">
             <li class="footer-section__center-icon-item">
@@ -290,7 +390,7 @@
         </div>
         <div class="footer-section__right-part">
           <p class="footer-section__right-part-title">Подпишитесь на рассылку</p>
-          <form action="#" class="flex">
+          <form action="#">
             <input
               type="email"
               name="email"
@@ -309,5 +409,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

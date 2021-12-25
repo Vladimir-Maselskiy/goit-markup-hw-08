@@ -5,6 +5,8 @@
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 280px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../img/desktop/Img.jpg');
   }
   .hero-section__container {
     width: 696px;
@@ -13,5 +15,12 @@
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../../img/desktop/Img@2x.jpg');
+    }
   }
 }

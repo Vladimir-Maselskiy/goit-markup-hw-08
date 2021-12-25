@@ -986,8 +986,9 @@ img {
 }
 
 .portfolio-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-width: 320px;
 }
 
 .portfolio-section__container {
@@ -998,11 +999,17 @@ img {
 }
 
 .portfolio-section__filter-list {
-  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .portfolio-section__filter-item {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .portfolio-section__filter-item:last-child {
@@ -1060,12 +1067,6 @@ img {
 }
 
 .portfolio-projets-list__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
   margin-bottom: 30px;
   background: #ffffff;
 }
@@ -1090,6 +1091,10 @@ img {
 .portfolio-projets-list__img-block {
   position: relative;
   overflow: hidden;
+}
+
+.portfolio-projets-list__image {
+  width: 100%;
 }
 
 .portfolio-projets-list__text {
@@ -1120,18 +1125,13 @@ img {
           transform: translateY(-100%);
 }
 
-.portfolio-projets-list {
-  margin-left: -30px;
-  margin-bottom: -30px;
-}
-
 .portfolio-projets-list__description {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px 24px;
-  width: 370px;
+  width: 100%;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -1139,6 +1139,10 @@ img {
 
 .portfolio-projets-list__name {
   margin-bottom: 4px;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .is-hidden.backdrop {
@@ -1163,19 +1167,24 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
+  min-height: 440px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 93px;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
+  overflow-y: scroll;
 }
 
 .modal {
   position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 100%;
+  max-width: 450px;
   height: 609px;
   padding: 40px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1190,6 +1199,12 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-height: 609px) {
+  .modal {
+    top: 70%;
+  }
 }
 
 .modal__close-button {
@@ -1504,8 +1519,23 @@ img {
 }
 
 @media screen and (min-width: 480px) {
+  .portfolio-section {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .modal {
-    width: 450px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -1574,6 +1604,17 @@ img {
   .hero-section {
     width: 768px;
   }
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/tablet/Header-768.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/tablet/Header-768.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/tablet/Header@2x-768.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/tablet/Header@2x-768.jpg");
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1614,6 +1655,9 @@ img {
         flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
+  }
+  .team-section__foto {
+    height: 374px;
   }
 }
 
@@ -1668,6 +1712,33 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio-section {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .portfolio-section__filter-list {
+    margin-bottom: 30px;
+  }
+  .portfolio-projets-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+  .portfolio-projets-list__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  .portfolio-projets-list__image {
+    height: 294px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .header-section {
     width: 1200px;
@@ -1714,6 +1785,8 @@ img {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 280px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/desktop/Img.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/desktop/Img.jpg");
   }
   .hero-section__container {
     width: 696px;
@@ -1722,6 +1795,13 @@ img {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/desktop/Img@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/desktop/Img@2x.jpg");
   }
 }
 
@@ -1751,6 +1831,9 @@ img {
   .team-section__item {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
+  }
+  .team-section__foto {
+    height: 260px;
   }
 }
 
@@ -1798,6 +1881,39 @@ img {
     display: inline-flex;
     margin: 0;
     margin-left: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    width: 1200px;
+  }
+  .portfolio-section__filter-list {
+    margin-bottom: 50px;
+  }
+  .portfolio-projets-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+  .portfolio-projets-list__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 581px;
+    max-width: none;
+    width: 528px;
   }
 }
 /*# sourceMappingURL=main.css.map */
