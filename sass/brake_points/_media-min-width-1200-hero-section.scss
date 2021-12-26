@@ -6,7 +6,7 @@
     padding-top: 200px;
     padding-bottom: 280px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../../img/desktop/Img-1200.jpg');
+      url('../img/desktop/Img-1200.jpg');
   }
   .hero-section__container {
     width: 696px;
@@ -20,7 +20,7 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero-section {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url('../../img/desktop/Img-1200@2x.jpg');
+        url('../img/desktop/Img-1200@2x.jpg');
     }
   }
 }
