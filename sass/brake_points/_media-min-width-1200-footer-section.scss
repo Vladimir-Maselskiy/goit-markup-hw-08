@@ -4,13 +4,17 @@
     max-width: 1600px;
   }
   .footer-section__container {
-    max-width: 1200px;
+    align-items: baseline;
+    width: 1200px;
     margin: 0 auto;
   }
+  .footer-section__sub-container {
+    padding: 0;
+    margin: 0;
+  }
+
   .footer-section__left-part {
     text-align: start;
-    width: 231px;
-    margin: 0;
   }
   .footer-section__center-part {
     margin-left: 70px;
@@ -18,11 +22,12 @@
 
   .footer-section__right-part {
     text-align: start;
-    width: 574px;
+
     margin: 0;
     margin-left: auto;
   }
   .footer-section__email-input {
+    margin-bottom: 0;
     width: 358px;
   }
   .footer-section__email-submit-button {

@@ -1,10 +1,16 @@
 @media screen and (min-width: 480px) {
   .hero-section {
-    width: 480px;
-    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/tablet/Header-768.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../../img/tablet/Header@2x-768.jpg');
+    }
   }
   .hero-section__container {
+    width: 480px;
     margin: 0 auto;
-    width: 360px;
   }
 }

@@ -1,16 +1,19 @@
 @media screen and (min-width: 768px) {
-  .footer-section {
-    width: 768px;
-  }
   .footer-section__container {
+    width: 768px;
     display: flex;
     flex-wrap: wrap;
+  }
+  .footer-section__sub-container {
+    display: flex;
+    margin-bottom: 60px;
+    padding-left: 61px;
     align-items: baseline;
   }
   .footer-section__left-part {
-    margin-left: 61px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
+
   .footer-section__center-part {
     margin-left: 165px;
     margin-bottom: 0;

@@ -1,8 +1,10 @@
 @media screen and (min-width: 1200px) {
   .feature-section {
-    width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .feature-section__container {
+    width: 1200px;
   }
 
   .feature-section__item {

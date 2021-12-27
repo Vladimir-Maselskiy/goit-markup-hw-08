@@ -1,12 +1,12 @@
 .header-section {
   border-bottom: 1px solid $line-color;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-    margin: 0 auto;
-  }
+  max-width: 1600px;
+
   @media screen and (max-width: 767px) {
     & .container {
       position: relative;
+      width: 480px;
+      margin: 0 auto;
     }
   }
   min-width: 320px;
