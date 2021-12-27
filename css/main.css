@@ -77,12 +77,18 @@ img {
 .universal-title {
   text-align: center;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .universal-title {
+    font-size: 36px;
+  }
 }
 
 .logo {
@@ -103,6 +109,7 @@ img {
 
 .header-section {
   border-bottom: 1px solid #ececec;
+  width: 100%;
   max-width: 1600px;
   min-width: 320px;
 }
@@ -110,7 +117,6 @@ img {
 @media screen and (max-width: 767px) {
   .header-section .container {
     position: relative;
-    width: 480px;
     margin: 0 auto;
   }
 }
@@ -734,14 +740,14 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -30px;
+  margin-right: -30px;
   margin-bottom: -30px;
 }
 
 .clients-section__item {
   -ms-flex-preferred-size: calc(100% / 2 - 30px);
       flex-basis: calc(100% / 2 - 30px);
-  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 30px;
 }
 
@@ -749,7 +755,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 210px;
   height: 92px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1015,7 +1020,7 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .portfolio-section__filter-item {
@@ -1138,7 +1143,6 @@ img {
 
 .portfolio-projets-list__description {
   padding: 20px 24px;
-  width: 100%;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -1242,7 +1246,7 @@ body.modal-open {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__close-button:hover {
+.modal__close-button:hover, .modal__close-button:focus {
   color: #2196f3;
 }
 
@@ -1602,10 +1606,11 @@ body.modal-open {
   }
   .header-right-list__item:nth-child(1) .header-right-list__link {
     padding-top: 21px;
-    padding-bottom: 5px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
   }
   .header-right-list__item:nth-child(2) .header-right-list__link {
-    padding-top: 5px;
+    padding-top: 0;
     padding-bottom: 21px;
   }
 }
@@ -1634,13 +1639,13 @@ body.modal-open {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
+    margin-right: -30px;
     margin-bottom: -30px;
   }
   .feature-section__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -1654,17 +1659,14 @@ body.modal-open {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
+    margin-right: -30px;
     margin-bottom: -30px;
   }
   .team-section__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 30px;
-  }
-  .team-section__foto {
-    height: 374px;
   }
 }
 
@@ -1678,14 +1680,16 @@ body.modal-open {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
+    margin-right: -30px;
     margin-bottom: -30px;
+    margin-left: 0;
   }
   .clients-section__item {
     -ms-flex-preferred-size: calc(100% / 3 - 30px);
         flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 30px;
+    margin-left: 0;
   }
 }
 
@@ -1730,19 +1734,22 @@ body.modal-open {
   .portfolio-section__filter-list {
     margin-bottom: 30px;
   }
+  .portfolio-section__filter-item {
+    margin-bottom: 0;
+  }
   .portfolio-projets-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
+    margin-right: -30px;
     margin-bottom: -30px;
   }
   .portfolio-projets-list__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
+    margin-right: 30px;
   }
   .portfolio-projets-list__link {
     display: -webkit-box;
@@ -1839,7 +1846,11 @@ body.modal-open {
   .feature-section__item {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
-    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .feature-section__item:last-child {
+    margin-right: 0;
   }
   .universal-title {
     margin-bottom: 50px;
@@ -1874,6 +1885,10 @@ body.modal-open {
   .clients-section__item {
     -ms-flex-preferred-size: calc(100% / 6 - 30px);
         flex-basis: calc(100% / 6 - 30px);
+    margin-bottom: 0;
+  }
+  .clients-section__item:last-child {
+    margin-right: 0;
   }
 }
 
@@ -1934,13 +1949,13 @@ body.modal-open {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
+    margin-right: -30px;
     margin-bottom: -30px;
   }
   .portfolio-projets-list__item {
     -ms-flex-preferred-size: calc(100% / 3 - 30px);
         flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 

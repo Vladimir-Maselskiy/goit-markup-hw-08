@@ -41,7 +41,7 @@
           </button>
           <ul class="nav-container-list list">
             <li class="nav-container-list__item">
-              <a class="nav-container-list__link" href="./index.html">Студия</a>
+              <a class="nav-container-list__link current" href="./index.html">Студия</a>
             </li>
             <li class="nav-container-list__item">
               <a class="nav-container-list__link current" href="./portfolio.html">Портфолио</a>
@@ -496,71 +496,74 @@
     </main>
     <footer class="footer-section">
       <div class="footer-section__container">
-        <div class="footer-section__left-part">
-          <a class="logo link" href="" lang="en"
-            >Web<span class="footer-section__logo-syffix">Studio</span>
-          </a>
-          <address class="footer-address">
-            <ul class="footer-address__list list">
-              <li class="footer-address__item">
-                <a
-                  class="footer-address__link third-text-color link"
-                  href="https://goo.gl/maps/jR1SKb3CfaXYw8aB8"
-                  target="_blank"
-                >
-                  г. Киев, пр-т Леси Украинки, 26
+        <div class="footer-section__sub-container">
+          <div class="footer-section__left-part">
+            <a class="logo link" href="" lang="en"
+              >Web<span class="footer-section__logo-syffix">Studio</span>
+            </a>
+            <address class="footer-address">
+              <ul class="footer-address__list list">
+                <li class="footer-address__item">
+                  <a
+                    class="footer-address__link third-text-color link"
+                    href="https://goo.gl/maps/jR1SKb3CfaXYw8aB8"
+                    target="_blank"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="footer-address__item list">
+                  <a
+                    class="footer-address__link footer-address__link-color-transparence link"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-address__item">
+                  <a
+                    class="footer-address__link footer-address__link-color-transparence link"
+                    href="+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-section__center-part">
+            <p class="footer-section__center-part-title">присоединяйтесь</p>
+            <ul class="footer-section__center-icon-list list flex">
+              <li class="footer-section__center-icon-item">
+                <a class="footer-section__center-icon-link" href="">
+                  <svg class="footer-section__center-icon">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="footer-address__item list">
-                <a
-                  class="footer-address__link footer-address__link-color-transparence link"
-                  href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+              <li class="footer-section__center-icon-item">
+                <a class="footer-section__center-icon-link" href="">
+                  <svg class="footer-section__center-icon">
+                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-address__item">
-                <a
-                  class="footer-address__link footer-address__link-color-transparence link"
-                  href="+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="footer-section__center-icon-item">
+                <a class="footer-section__center-icon-link" href="">
+                  <svg class="footer-section__center-icon">
+                    <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-section__center-icon-link" href="">
+                  <svg class="footer-section__center-icon">
+                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="footer-section__center-part">
-          <p class="footer-section__center-part-title">присоединяйтесь</p>
-          <ul class="footer-section__center-icon-list list flex">
-            <li class="footer-section__center-icon-item">
-              <a class="footer-section__center-icon-link" href="">
-                <svg class="footer-section__center-icon">
-                  <use href="./img/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-section__center-icon-item">
-              <a class="footer-section__center-icon-link" href="">
-                <svg class="footer-section__center-icon">
-                  <use href="./img/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-section__center-icon-item">
-              <a class="footer-section__center-icon-link" href="">
-                <svg class="footer-section__center-icon">
-                  <use href="./img/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="footer-section__center-icon-link" href="">
-                <svg class="footer-section__center-icon">
-                  <use href="./img/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="footer-section__right-part">
           <p class="footer-section__right-part-title">Подпишитесь на рассылку</p>
           <form action="#">
@@ -583,5 +586,11 @@
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
