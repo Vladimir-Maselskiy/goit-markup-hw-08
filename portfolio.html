@@ -23,14 +23,19 @@
   </head>
 
   <body>
-    <header class="header-section" js-menu-container>
+    <header class="header-section js-menu-container" id="mobile-menu">
       <div class="container">
         <nav class="nav-container">
           <a class="logo link" href="" lang="en">Web<span class="lofo__syffix">Studio</span></a>
-          <button type="button" class="mobile-button" js-open-menu>
+          <button
+            type="button"
+            class="mobile-button js-open-menu js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
             <svg class="mobile-button__svg">
               <use
-                class="mobile-button__icon-cross"
+                class="mobile-button__icon-cross js-close-menu"
                 href="./img/symbol-defs.svg#icon-close_mobile"
               ></use>
               <use

@@ -4,10 +4,14 @@
   }
   .portfolio-section__filter-list {
     margin-bottom: 30px;
+    justify-content: center;
   }
 
   .portfolio-section__filter-item {
     margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   .portfolio-projets-list {
     display: flex;

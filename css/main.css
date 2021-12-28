@@ -124,12 +124,22 @@ img {
   .header-section.is-open {
     border: none;
     position: relative;
+    min-width: 320px;
   }
   .header-section.is-open .container {
     position: relative;
     height: 100vh;
     min-height: 475px;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 409px) {
+  .header-section.is-open .container {
+    min-height: 555px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .header-section.is-open ~ * {
     display: none;
   }
@@ -147,6 +157,7 @@ img {
     display: block;
   }
   .header-section.is-open .nav-container-list {
+    opacity: 1;
     display: block;
     margin: 0;
     padding-left: 25px;
@@ -157,11 +168,12 @@ img {
     padding-bottom: 32px;
   }
   .header-section.is-open .header-right-list {
+    opacity: 1;
     position: absolute;
     bottom: 0;
     left: 0;
     display: block;
-    padding-left: 25px;
+    padding-left: 40px;
   }
   .header-section.is-open .header-right-list__link {
     display: block;
@@ -176,7 +188,12 @@ img {
     padding-top: 32px;
   }
   .header-section.is-open .header-right-list__item.mobile-items {
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 320px;
   }
 }
 
@@ -205,6 +222,7 @@ img {
 }
 
 .mobile-button {
+  opacity: 1;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -378,6 +396,7 @@ img {
 
 .header-right-list__item.mobile-items {
   display: none;
+  width: calc(100vw - 40px);
 }
 
 .mobile-social-item {
@@ -388,6 +407,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mobile-social-list__link {
@@ -404,6 +425,12 @@ img {
 
 .mobile-social-list__link:focus {
   outline: none;
+}
+
+@media screen and (max-width: 399px) {
+  .mobile-social-item:nth-child(4) .mobile-social-list__link {
+    padding-left: 0;
+  }
 }
 
 .mobile-social-item:nth-child(1) .mobile-social-list__link {
@@ -1022,10 +1049,6 @@ img {
 .portfolio-section__filter-item {
   margin-right: 8px;
   margin-bottom: 15px;
-}
-
-.portfolio-section__filter-item:last-child {
-  margin-right: 0;
 }
 
 .portfolio-section__filter-btn {
@@ -1744,9 +1767,15 @@ body.modal-open {
   }
   .portfolio-section__filter-list {
     margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .portfolio-section__filter-item {
     margin-bottom: 0;
+  }
+  .portfolio-section__filter-item:last-child {
+    margin-right: 0;
   }
   .portfolio-projets-list {
     display: -webkit-box;
