@@ -6,12 +6,11 @@
   .clients-section__container {
     width: 1200px;
   }
-
+  .clients-section__list {
+    margin-bottom: 0;
+  }
   .clients-section__item {
     flex-basis: calc(100% / 6 - 30px);
     margin-bottom: 0;
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
