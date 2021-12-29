@@ -3,19 +3,24 @@
     width: 768px;
     display: flex;
     flex-wrap: wrap;
+    @media screen and (max-width: 1199px) {
+      padding-left: 76px;
+      padding-right: 89px;
+    }
   }
   .footer-section__sub-container {
     display: flex;
-    margin-bottom: 60px;
-    padding-left: 61px;
+    justify-content: space-between;
     align-items: baseline;
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+    }
   }
   .footer-section__left-part {
     margin-bottom: 0;
   }
 
   .footer-section__center-part {
-    margin-left: 165px;
     margin-bottom: 0;
   }
 

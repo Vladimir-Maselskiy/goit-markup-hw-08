@@ -14,8 +14,10 @@
 
 .team-section__item {
   min-width: 163px;
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   background-color: $third-text-color;

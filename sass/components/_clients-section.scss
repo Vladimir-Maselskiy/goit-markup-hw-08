@@ -13,13 +13,11 @@
 .clients-section__list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin: -15px;
 }
 .clients-section__item {
   flex-basis: calc(100% / 2 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 .clients-section__link {
